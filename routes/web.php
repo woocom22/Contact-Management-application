@@ -9,6 +9,7 @@ Route::get('/', function () {
 // list all contacts
 Route::get('/contacts/create', [contactController::class, 'create'])->name('form.get');
 Route::post('/contacts', [ContactController::class, 'allContact'])->name('form.post');
+Route::get('/contacts', [ContactController::class, 'contactsIndex'])->name('allContacts');
 // Show the from to create a new contact
 // Store a new contact
 //Route::get('/contacts', []);

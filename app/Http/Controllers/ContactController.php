@@ -18,6 +18,13 @@ class ContactController extends Controller
             'phone' => $request->input('name'),
             'address' => $request->input('address'),
         ]);
+       return redirect(route('allContacts'))->with('success','Contact added successfully');
+    }
+
+    function  contactsIndex()
+    {
+        $contacts = contact::all();
+        return view('frontend.index', compact('contacts'));
     }
 //    function  showContact()
 //    {
