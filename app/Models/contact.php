@@ -15,4 +15,6 @@ class contact extends Model
         'address'
     ];
 
+
+
 }

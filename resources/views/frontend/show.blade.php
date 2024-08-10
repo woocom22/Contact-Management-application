@@ -1,15 +1,33 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>
-    This is form show page
-</h1>
-</body>
-</html>
+<x-layout>
+    <div>
+        <div class="table-responsive mt-4">
+            <table class="center">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($contacts as $contact)
+                    <tr>
+                        <th>{{ $contact->id }}</th>
+                        <th>{{ $contact->name }}</th>
+                        <th>{{ $contact->email }}</th>
+                        <th>{{ $contact->phone }}</th>
+                        <th>{{ $contact->address }}</th>
+                        <th><a href="/contacts/{{ $contact->id }}/edit"><button type="button">Edit</button></a></th>
+                        <th><a href="/contacts/{{ $contact->id }}/delete"><button type="reset">Delete</button></a></th>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</x-layout>
