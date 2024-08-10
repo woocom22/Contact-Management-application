@@ -1,4 +1,5 @@
 <x-layout>
+    <a href="{{ route('form.post') }}"><button class="success">Home</button></a>
     <div>
         <form class="mt-4" method="post" action="{{ route('form.update', $contact->id) }}">
             @csrf

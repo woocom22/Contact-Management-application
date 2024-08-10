@@ -1,5 +1,6 @@
 <x-layout>
     <div>
+        <a href="{{ route('form.get') }}"><button class="success">Add Contact</button></a>
         <div class="table-responsive mt-4">
             <table class="center">
                 <thead>

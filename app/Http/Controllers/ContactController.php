@@ -43,13 +43,7 @@ class ContactController extends Controller
         $contacts = contact::find($id);
         $contacts->name = $request->input('name');
         $contacts->email = $request->input('email');
-        $contacts->phone = $request->input('phone');+
-
-
-
-
-
-
+        $contacts->phone = $request->input('phone');
         $contacts->address = $request->input('address');
         $contacts->save();
         return redirect(route('allContacts'))->with('success','Contact update successfully');

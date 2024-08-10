@@ -1,4 +1,5 @@
 <x-layout>
+    <a href="{{ route('form.post') }}"><button class="success">Home</button></a>
     <form class="mt-4" method="POST" action="{{ route('form.post') }}">
         @csrf
         <fieldset>
